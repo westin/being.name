@@ -1,0 +1,84 @@
+html {
+	background-color: #E9E9E9;
+	font-family: 'Helvetica Neue';
+}
+
+
+
+#being-header {
+
+}
+
+
+
+
+
+.user-tweet {
+	background-color: white;
+	padding: 5px;
+	padding-top: 8px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #E9E9E9;
+}
+
+.user-tweet-avatar {
+
+}
+
+.user-tweet-avatar img {
+	border-radius: 4px;
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+.user-tweet-content {
+	padding-left: 8px;
+}
+
+.user-tweet-info {
+	margin-left: 10px;
+}
+
+.full-name {
+	font-weight: 600;
+	float: left;
+	margin-left: 3px;
+	font-size: 13px;
+
+}
+.username {
+	float: left;
+	margin-left: 7px;
+	font-size: 13px;
+	color: #8F8F8F;
+
+}
+.date {
+	float: left;
+	margin-left: 7px;
+	font-size: 13px;
+	color: #8F8F8F;
+
+}
+
+.user-tweet-text {
+	padding: 2px;
+	padding-top: 0px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.user-tweet-engagement {
+	padding-top: 5px;
+}
+
+.user-tweet-engagement img{
+	opacity: .3;
+	margin-right: 40px;
+	-webkit-transition: opacity 100ms;
+    transition: opacity 100ms;
+}
+
+.user-tweet-engagement img:hover{
+	opacity: 1;
+}
