@@ -34,7 +34,7 @@ html {
 	font-size: 13px;
 	float: left;
 	padding-top: 2px;
-	padding-left: 6px;
+	padding-left: 15px;
 }
 
 #user-bar-logout{
@@ -144,7 +144,7 @@ html {
 
 .title-wrapper{
 	width: 75%;
-	padding-left: 28%;
+	padding-left: 29%;
 	display: block;
 	left: auto;
  	right: auto;
