@@ -30,86 +30,60 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
 <body>
+    <!-- Primary Page Layout
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="container" class="container">
+    </div>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+    <!-- End Document
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script id="tweet-list-template" type="text/x-handlebars-template" >
     <div class="row" id="being-header">
-      <div class="eight columns offset-by-two">
-        <div class="title-wrapper">
-          <h1>being</h1>
-          <img src="images/avatar3.jpeg">
-          <div id="being-id-wrapper">
-            <span id="being-name">Alex Stern</span>
-            <br>
-            <span id="being-username">@st3rno</span>
+          <div class="eight columns offset-by-two">
+            <div class="title-wrapper">
+              <h1>being</h1>
+              <img src="images/avatar3.jpeg">
+              <div id="being-id-wrapper">
+                <span id="being-name">Alex Stern</span>
+                <br>
+                <span id="being-username">@st3rno</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- <div class="two columns offset-by-five">
-        <div id="being-following">
-          <span id="being-following-title">Following</span>
-          <span id="being-following-count">211</span>
-        </div>
-      </div> -->
-    </div>
+        {{#each tweets }}
+        <div class="row tweet-row">
+            <div class="eight columns offset-by-two user-tweet">
+                <div class="one column user-tweet-avater">
+                    <img src={{ this.user.profile_image_url }} class="timeline-avatar">
+                </div>
+                <div class="eleven columns user-tweet-content">
+                    <div class="twelve columns user-tweet-info">
+                        <span class="full-name">{{ this.user.name }}</span>
+                        <span class="username">{{ this.user.screen_name }}</span>
+                        <span class="date"></span>
+                    </div>
+                    <div class="twelve columns user-tweet-text">
+                        <span>{{ this.text }}</span>
+                    </div>
+                    <div class="twelve columns user-tweet-engagement">
+                        <img src="images/reply_hover.png">
+                        <img src="images/retweet_hover.png">
+                        <img src="images/favorite_hover.png">
+                    </div>
+                </div>
+        {{/each}}
+    </script>
 
-    <div class="row tweet-row">
-      <div class="eight columns offset-by-two user-tweet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
 
-        <div class="one column user-tweet-avatar">
-          <img src="images/avatar2.jpeg" height='170%' width='170%' class="timeline-avatar">
-        </div>
-
-        <div class="eleven columns user-tweet-content">
-          <div class="twelve columns user-tweet-info">
-            <span class="full-name">Jonnie Hallman</span>
-            <span class="username">@destroytoday</span>
-            <span class="date">· Jan 28</span>
-          </div>
-          <div class="twelve columns user-tweet-text">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu smod te mpor incididunt ut labore et dolore magna aliqua.</span>
-          </div>
-          <div class="twelve columns user-tweet-engagement">
-            <img src="images/reply_hover.png">
-            <img src="images/retweet_hover.png">
-            <img src="images/favorite_hover.png">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row tweet-row">
-      <div class="eight columns offset-by-two user-tweet">
-
-        <div class="one column user-tweet-avatar">
-          <img src="images/avatar.jpeg" height='170%' width='170%' class="timeline-avatar">
-        </div>
-
-        <div class="eleven columns user-tweet-content">
-          <div class="twelve columns user-tweet-info">
-            <span class="full-name">Westin Lohne</span>
-            <span class="username">@westinlohne</span>
-            <span class="date">· Jan 28</span>
-          </div>
-          <div class="twelve columns user-tweet-text">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu smod te mpor incididunt ut labore et dolore magna aliqua.</span>
-          </div>
-          <div class="twelve columns user-tweet-engagement">
-            <img src="images/reply_hover.png">
-            <img src="images/retweet_hover.png">
-            <img src="images/favorite_hover.png">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
