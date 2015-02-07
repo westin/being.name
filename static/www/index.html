@@ -75,12 +75,12 @@
                 <div class="row tweet-row">
                     <div class="twelve column user-tweet">
                         <div class="one column user-tweet-avatar">
-                            <img src={{ this.user.profile_image_url }} class="timeline-avatar">
+                            <a href="http://twitter.com/{{ this.user.screen_name }}" target="_blank"><img src={{ this.user.profile_image_url }} class="timeline-avatar"></a>
                         </div>
                         <div class="eleven columns user-tweet-content">
                             <div class="twelve columns user-tweet-info">
-                                <span class="full-name">{{ this.user.name }}</span>
-                                <span class="username">{{ this.user.screen_name }}</span>
+                                <span class="full-name"><a href="http://twitter.com/{{ this.user.screen_name }}" target="_blank">{{ this.user.name }}</a></span>
+                                <span class="username"><a href="http://twitter.com/{{ this.user.screen_name }}" target="_blank">@{{ this.user.screen_name }}</a></span>
                                 <span class="date"></span>
                             </div>
                             <div class="twelve columns user-tweet-text">
