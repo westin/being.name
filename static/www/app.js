@@ -2532,7 +2532,7 @@ app.routes = {}
 
 app.templates.tweetlist = Handlebars.compile($('#tweet-list-template').html());
 app.routes.tweetlist = function () {
-    $('#container').html(app.templates.tweetlist({'tweets': data}));
+    $('#tweet-stuff').html(app.templates.tweetlist({'tweets': data}));
 }
 
 $(app.routes.tweetlist);
